@@ -9,3 +9,6 @@
   |]
 }]
 
+type 'a t = Fix of 'a t lazy_t
+
+let rec fix () = Fix (lazy (fix ()))

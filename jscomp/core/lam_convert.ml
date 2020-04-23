@@ -263,9 +263,7 @@ let lam_prim ~primitive:( p : Lambda.primitive) ~args loc : Lam.t =
       )
     | Blk_lazy_general  
       ->       
-        prim 
-          ~primitive:(Pccall {prim_name="caml_lazy_make"; prim_arity = 1; prim_native_name = ""})
-          ~args loc          
+        assert false
     | Blk_lazy_forward
       -> 
       let info : Lam_tag_info.t = Blk_na "" in
